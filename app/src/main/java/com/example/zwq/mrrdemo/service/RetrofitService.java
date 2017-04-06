@@ -27,10 +27,15 @@ public interface RetrofitService {
      * Date:            2017/4/5 16:29
      */
     @FormUrlEncoded//使用了field 和fieldMap注解后，一定要加这个，不然会报错
-    @POST("这里为登录接口")//找了很久都没在网上找到开放的登录接口，所以大家想测试登录，只要换上自己项目的登录接口便可
+    //找了很久都没在网上找到开放的登录接口，所以大家想测试登录，只要换上自己项目的登录接口便可
+    @POST("这里为登录接口")
     Observable<UserBean> login(@FieldMap Map<String, String> loginMap);
 
-
+    /**
+     * Description:     get获取文章数据
+     * Author:          ZWQ
+     * Date:            2017/4/6 12:15
+     */
     @GET("article/today")
     Observable<BookBean> getBook(@Query("dev") int dev);
 

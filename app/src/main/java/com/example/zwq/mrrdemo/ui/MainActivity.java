@@ -99,6 +99,6 @@ public class MainActivity extends BaseMvpActivity implements LoginContract.View 
     @Override
     public void onError(String result) {
         Log.e(TAG, result);
-        Toast.makeText(this, result, Toast.LENGTH_SHORT);
+        main_user_tv.setText(result);//加载成功后，获取数据进行view操作
     }
 }
